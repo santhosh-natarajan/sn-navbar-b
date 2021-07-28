@@ -1,0 +1,45 @@
+<nav
+  class="navbar navbar-light fixed-top"
+  [ngStyle]="{
+    'background-color': customNavBgColor,
+    color: customNavBrandColor
+  }"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand" [href]="logoNav">
+      <img
+        [src]="logoImgSrc"
+        alt="brand-logo"
+        width="30"
+        height="24"
+        style="vertical-align: top"
+      />
+    </a>
+    <h2>{{ brandName }}</h2>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      [ngStyle]="{ 'background-color': customNavBtnBgColor }"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item" *ngFor="let menu of menuItems">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            [href]="menu.menuNavPath"
+            [ngStyle]="{ color: customNavItemColor }"
+            >{{ menu.menuName }}</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

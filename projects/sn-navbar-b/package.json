@@ -1,0 +1,11 @@
+{
+  "name": "sn-navbar-b",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "@angular/common": "^12.1.2",
+    "@angular/core": "^12.1.2"
+  },
+  "dependencies": {
+    "tslib": "^2.2.0"
+  }
+}
